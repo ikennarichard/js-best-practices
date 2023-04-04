@@ -3,25 +3,15 @@ export default class Drag {
   static drag() {
     const listItem = document.querySelectorAll('.list_item');
     listItem.forEach((item) => {
-      item.addEventListener('dragstart', () => {
-        item.classList.add('dragging');
-      });
+      item.addEventListener('dragstart', () => item.classList.add('dragging'));
 
-      item.addEventListener('dragend', () => {
-        item.classList.remove('dragging');
-      });
+      item.addEventListener('dragend', () => item.classList.remove('dragging'));
 
-      item.addEventListener('dragenter', () => {
-        item.classList.add('highlight');
-      });
+      item.addEventListener('dragenter', () => item.classList.add('highlight'));
 
-      item.addEventListener('dragleave', () => {
-        item.classList.remove('highlight');
-      });
+      item.addEventListener('dragleave', () => item.classList.remove('highlight'));
 
-      item.addEventListener('drop', () => {
-        item.classList.remove('highlight');
-      });
+      item.addEventListener('drop', () => item.classList.remove('highlight'));
     });
   }
 
